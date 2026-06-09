@@ -16,6 +16,6 @@ with open("sales.csv", "r", encoding="utf-8") as file:
             
     # Solution no.2:
     
-    for row in reader:
-        if any(search in cell.lower() for cell in row):
-             print(row)
+    # for row in reader:
+    #     if any(search in cell.lower() for cell in row):
+    #          print(row)
