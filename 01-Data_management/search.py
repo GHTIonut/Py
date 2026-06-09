@@ -11,11 +11,11 @@ with open("sales.csv", "r", encoding="utf-8") as file:
     
     for row in reader:
         for cell in row:
-            if search in cell:
+            if search in cell.lower():
                 print(row)
             
     # Solution no.2:
     
-    # for row in reader:
-    #     if any(search in cell for cell in row):
-    #          print(row)
+    for row in reader:
+        if any(search in cell.lower() for cell in row):
+             print(row)
