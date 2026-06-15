@@ -1,12 +1,12 @@
 import random
 
 float_number = random.random() * 10
-int_number = float_number.__round__()
-print(int_number)
+to_be_guessed = float_number.__round__()
+print(to_be_guessed)
 user_number = int(input('Guess the number from 0 to 10: '))
 k = 0
 t = 3
-while user_number != int_number:
+while user_number != to_be_guessed:
     t -= 1
     k += 1
     if t == 0:
@@ -16,5 +16,5 @@ while user_number != int_number:
     print(f"You've tried {k} times. {t} chances left.")
     user_number = int(input("Guess the number from 0 to 10: "))
 
-if user_number == int_number:
+if user_number == to_be_guessed:
     print("You found the number. Congratulations!")
